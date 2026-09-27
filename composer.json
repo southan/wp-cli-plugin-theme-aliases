@@ -1,0 +1,38 @@
+{
+	"name": "southan/wp-cli-plugin-theme-aliases",
+	"description": "Manage plugin & theme aliases for easy reuse in WP-CLI commands.",
+	"license": "GPL-3.0-or-later",
+	"type": "wp-cli-package",
+	"authors": [
+		{
+			"name": "Alex Southan",
+			"homepage": "https://southan.dev"
+		}
+	],
+	"homepage": "https://github.com/southan/wp-cli-plugin-theme-aliases",
+	"require": {
+		"php": ">=8.0",
+		"southan/wp-cli": "dev-main",
+		"wp-cli/wp-cli": "^2.12"
+	},
+	"autoload": {
+		"psr-4": {
+			"WP_CLI_Plugin_Theme_Aliases\\": "src/"
+		},
+		"files": [
+			"wp-cli-plugin-theme-aliases.php"
+		]
+	},
+	"extra": {
+		"commands": [
+			"plugin alias",
+			"plugin alias set",
+			"plugin alias list",
+			"plugin alias delete",
+			"theme alias",
+			"theme alias set",
+			"theme alias list",
+			"theme alias delete"
+		]
+	}
+}
