@@ -56,7 +56,7 @@ class Aliases {
 	public function save( Alias $alias, ?string $type = null ) : void {
 		$key = $this->get_key();
 
-		$config = new Config( $type );
+		$config = Config::from( $type );
 
 		$aliases = $config[ $key ] ?? [];
 
@@ -79,7 +79,7 @@ class Aliases {
 		$found = false;
 
 		foreach ( (array) $type as $config_type ) {
-			$config = new Config( $config_type );
+			$config = Config::from( $config_type );
 
 			$aliases = $config[ $key ] ?? null;
 
